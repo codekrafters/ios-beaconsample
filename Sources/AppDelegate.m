@@ -33,6 +33,8 @@
     [locationMananger startRangingBeaconsInRegion:region];
     [region release];
     
+    [locationMananger release];
+    
     // Override point for customization after application launch.
     return YES;
 }

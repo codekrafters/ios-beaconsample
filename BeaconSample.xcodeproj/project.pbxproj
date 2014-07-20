@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CD7B644197BAF8B005E2020 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD7B642197BAF8B005E2020 /* MainViewController.m */; };
+		5CD7B647197BAFB0005E2020 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD7B646197BAFB0005E2020 /* MainViewController.xib */; };
 		5CDEDE5F197B0A8D000F8314 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEDE54197B0A8D000F8314 /* AppDelegate.m */; };
 		5CDEDE63197B0A8D000F8314 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEDE59197B0A8D000F8314 /* main.m */; };
 		5CDEDE6D197B0AEF000F8314 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDEDE6A197B0AEF000F8314 /* Images.xcassets */; };
-		5CDEDE6E197B0AEF000F8314 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CDEDE6B197B0AEF000F8314 /* Info.plist */; };
 		5CDEDE76197B0D5E000F8314 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDEDE73197B0D44000F8314 /* CoreLocation.framework */; };
 		5CDEDE77197B0D5E000F8314 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDEDE71197B0B7B000F8314 /* Foundation.framework */; };
 		5CDEDE78197B0D5E000F8314 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDEDE6F197B0B75000F8314 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CD7B641197BAF8B005E2020 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5CD7B642197BAF8B005E2020 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5CD7B646197BAFB0005E2020 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		5CDEDE2B197B0932000F8314 /* CK-Beacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CK-Beacon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDEDE53197B0A8D000F8314 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CDEDE54197B0A8D000F8314 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		5CDEDE51197B0A8D000F8314 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5CD7B646197BAFB0005E2020 /* MainViewController.xib */,
 				5CDEDE6A197B0AEF000F8314 /* Images.xcassets */,
 				5CDEDE6B197B0AEF000F8314 /* Info.plist */,
 			);
@@ -75,6 +80,8 @@
 				5CDEDE53197B0A8D000F8314 /* AppDelegate.h */,
 				5CDEDE54197B0A8D000F8314 /* AppDelegate.m */,
 				5CDEDE59197B0A8D000F8314 /* main.m */,
+				5CD7B641197BAF8B005E2020 /* MainViewController.h */,
+				5CD7B642197BAF8B005E2020 /* MainViewController.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -147,8 +154,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CDEDE6E197B0AEF000F8314 /* Info.plist in Resources */,
 				5CDEDE6D197B0AEF000F8314 /* Images.xcassets in Resources */,
+				5CD7B647197BAFB0005E2020 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDEDE63197B0A8D000F8314 /* main.m in Sources */,
+				5CD7B644197BAF8B005E2020 /* MainViewController.m in Sources */,
 				5CDEDE5F197B0A8D000F8314 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +298,7 @@
 				5CDEDE4D197B0933000F8314 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

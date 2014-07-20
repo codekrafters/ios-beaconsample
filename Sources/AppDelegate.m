@@ -14,9 +14,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "AppDelegate.h"
-#import <CoreLocation/CoreLocation.h>
+#import "MainViewController.h"
 
-@interface AppDelegate () <CLLocationManagerDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -25,15 +25,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    CLLocationManager* locationMananger = [[CLLocationManager alloc] init];
-    locationMananger.delegate = self;
-    
-    NSUUID* uuid = [[NSUUID alloc] initWithUUIDString:@"B0702880-A295-A8AB-F734-031A98A512DE"];
-    CLBeaconRegion* region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"ck-beacon"];
-    [locationMananger startRangingBeaconsInRegion:region];
-    [region release];
-    
-    [locationMananger release];
+    NSLog(@"Launching app");
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    MainViewController* main = [[[MainViewController alloc] init] autorelease];
+    self.window.rootViewController = main;
+    [self.window makeKeyAndVisible];
     
     // Override point for customization after application launch.
     return YES;
@@ -59,35 +55,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-#pragma mark -
-#pragma mark CLLocationManagerDelegate
-
-/*
- *  locationManager:didRangeBeacons:inRegion:
- *
- *  Discussion:
- *    Invoked when a new set of beacons are available in the specified region.
- *    beacons is an array of CLBeacon objects.
- *    If beacons is empty, it may be assumed no beacons that match the specified region are nearby.
- *    Similarly if a specific beacon no longer appears in beacons, it may be assumed the beacon is no longer received
- *    by the device.
- */
-- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
-{
-    NSLog(@"Ranging beacons: %@", beacons);
-}
-
-/*
- *  locationManager:rangingBeaconsDidFailForRegion:withError:
- *
- *  Discussion:
- *    Invoked when an error has occurred ranging beacons in a region. Error types are defined in "CLError.h".
- */
-- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
-{
-    NSLog(@"Ranging beacons error: %@", error);
 }
 
 @end
